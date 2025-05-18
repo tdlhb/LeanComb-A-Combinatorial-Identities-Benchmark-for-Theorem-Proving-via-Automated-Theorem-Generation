@@ -8,7 +8,7 @@ Welcome to the official repository for the project **"LeanComb: A Combinatorial 
 
 
 ## Introduction
-This repository provides the test results and test datasets used in the paper. The main sections of the repository are structured to ensure easy navigation for users interested in accessing our experimental results or utilizing our provided test dataset.
+This repository contains the code, test datasets, and experimental results used in our paper. 
 
 
 ## Repository Structure
@@ -16,6 +16,8 @@ This repository provides the test results and test datasets used in the paper. T
 The directory structure is organized as follows:
 
 ```
+├── code
+│   └── [Main code files]
 ├── eval_results
 │   └── [Experimental result files]
 ├── lean_comb_test
@@ -23,10 +25,14 @@ The directory structure is organized as follows:
 ```
 
 ### 1. **`eval_results/`**
+This folder contains the code for generating augmented data, verifying the retrieved data, and performing evaluation. It includes all scripts related to data enhancement, validation, and testing.
+
+
+### 2. **`eval_results/`**
 This folder contains the experimental results generated during the evaluation phase of our research. 
 
 
-### 2. **`lean_comb_test/`**
+### 3. **`lean_comb_test/`**
 This folder includes the dataset used for evaluation and testing. The dataset is essential for reproducing the results shown in our paper and can also be used for further experimentation.
 
 
