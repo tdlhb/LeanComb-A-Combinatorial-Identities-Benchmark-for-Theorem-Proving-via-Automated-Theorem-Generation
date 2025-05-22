@@ -58,15 +58,6 @@ python corrector.py
 
 ---
 
-<!-- ### Model Evaluation
-
-1. Set paths for `task_file`, `record_file`, etc. in `eval.py`.
-2. Run:
-
-```bash
-python eval.py
-``` -->
-
 ### Model Evaluation
 This project supports two types of model evaluation:
 

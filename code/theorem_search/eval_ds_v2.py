@@ -17,16 +17,21 @@ for i in range(num_of_actors):
                                         DEEPSEEK_SAMPLE_CONFIG))
     time.sleep(MODEL_LOAD_GAP)
 
+"""
+To use theorems from the LeanComb dataset in proofs,
+please add "import Theorem" to the init_state variable.
 
-init_state = """import Theorem\nimport Mathlib
+The LeanComb dataset will be released soon.
+"""
+init_state = """import Mathlib
 open BigOperators Real Nat Topology
 """
 
 # File for recording test results
-record_file = ""
+record_file = "eval_results/eval_new.jsonl"
 
 # Test set path
-task_file = ""
+task_file = "lean_comb_test/jsonl/lean_comb_test.jsonl"
 
 
 def get_tasks():

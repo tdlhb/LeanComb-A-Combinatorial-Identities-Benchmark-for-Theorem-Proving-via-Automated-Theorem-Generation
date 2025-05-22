@@ -18,18 +18,18 @@ for i in range(num_of_actors):
     time.sleep(MODEL_LOAD_GAP)
 
 
-init_state = """import Theorem\nimport Mathlib
+init_state = """import Mathlib
 open BigOperators Real Nat Topology
 """
 
 # File for recording test results
-record_file = ""
+record_file = "eval_results/eval_new.jsonl"
 
 # Test set path
-task_file = ""
+task_file = "lean_comb_test/jsonl/lean_comb_test.jsonl"
 
 
-def get_tasks():
+def get_tasks():    
     tasks = []
     visited_theorem = set()
 
