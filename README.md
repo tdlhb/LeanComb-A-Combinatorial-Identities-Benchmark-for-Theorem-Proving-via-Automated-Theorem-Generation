@@ -5,6 +5,8 @@ Welcome to the official repository for the project **"LeanComb: A Combinatorial 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Repository Structure](#repository-structure)
+- [Model Access](#model-access)
+
 
 
 ## Introduction
@@ -36,5 +38,19 @@ This folder contains the experimental results generated during the evaluation ph
 This folder includes the dataset used for evaluation and testing. The dataset is essential for reproducing the results shown in our paper and can also be used for further experimentation.
 
 
+## Model Access
+We provide our models via Hugging Face. The models can be accessed using the following link and token.
 
+### Hugging Face Repository
+Model link:
+
+https://huggingface.co/llmformath/leancomb
+
+
+### Access token (read-only):
+```
+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
+```
+
+Note: The model repository is private and requires the token above to access.
 
