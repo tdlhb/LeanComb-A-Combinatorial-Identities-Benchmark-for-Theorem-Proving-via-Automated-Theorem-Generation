@@ -26,7 +26,7 @@ The directory structure is organized as follows:
 │   └── [Test dataset files]
 ```
 
-### 1. **`eval_results/`**
+### 1. **`code/`**
 This folder contains the code for generating augmented data, verifying the retrieved data, and performing evaluation. It includes all scripts related to data enhancement, validation, and testing.
 
 
