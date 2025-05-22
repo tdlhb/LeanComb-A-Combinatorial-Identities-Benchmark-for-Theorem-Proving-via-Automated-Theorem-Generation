@@ -58,6 +58,27 @@ PROMPT_CONFIG = {
 '''prompt'''
 
 
+DEEPSEEK_PROMPT_CONFIG = {
+    "system": "", 
+    "instruction": "", 
+    "input": "",
+    "prompt_template":
+        f'''Complete the following Lean 4 code:
+
+```lean4
+$ts'''
+}
+
+DEEPSEEK_PASSK = 32
+
+DEEPSEEK_SAMPLE_CONFIG = {
+    "n": 1, 
+    "temperature": 0.95, 
+    "max_tokens": 2048,
+    "logprobs": 0,
+}
+
+
 MODEL_LOAD_GAP = 30
 '''The time interval between loading two adjacent models in the model thread pool'''
 

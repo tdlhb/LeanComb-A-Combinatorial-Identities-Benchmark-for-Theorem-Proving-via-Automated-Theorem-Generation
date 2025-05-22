@@ -232,3 +232,32 @@ class Searcher:
         
         lean.close()
         return theorem_list
+
+    def search_deepseek(self, theorem) -> list:
+        print("Theorem init success")
+        for ii in range(DEEPSEEK_PASSK):
+            res = self.model_pool.submit(lambda a, v: a.generate_tactics_scores.remote(*v),
+                                            (theorem + " := by", DEEPSEEK_SAMPLE_CONFIG))
+
+            for txt, sce in res:
+                all_code = txt.replace("```lean4\n","")
+                all_code = all_code.replace("```","")
+                match = re.match(r'^(?:(?:import .*\n)|(?:set_option .*\n)|(?:open .*\n)|(?:\s*\n))*', theorem)
+                if match:
+                    header = match.group(0)
+                    all_code = header + all_code
+                else:
+                    all_code = "import Mathlib\nopen BigOperators Real Nat Finset\n" + all_code
+                try:
+                    self.lean = Lean4Kit(LEAN_WORKDIR, REPL_VERSION, verbose=True)
+                    if self.lean.is_correct_and_finished(all_code,verbose=True):
+                        self.lean.close()
+                        print("Theorem is proved")
+                        return [txt]
+                except Exception as e:
+                    self.lean.close()
+                    print("Tactic run failed")
+                    continue
+                self.lean.close()
+        print("Search failed")
+        return []

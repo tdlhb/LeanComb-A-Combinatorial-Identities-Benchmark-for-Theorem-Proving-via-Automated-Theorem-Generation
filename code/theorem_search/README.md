@@ -58,12 +58,38 @@ python corrector.py
 
 ---
 
-### Model Evaluation
+<!-- ### Model Evaluation
 
 1. Set paths for `task_file`, `record_file`, etc. in `eval.py`.
 2. Run:
 
 ```bash
 python eval.py
-```
+``` -->
+
+### Model Evaluation
+This project supports two types of model evaluation:
+
+**Tree Search Model Evaluation**
+
+This method applies to all models except `deepseek_v2_prover_enhanced`, and performs proof search via a tree-based exploration strategy.
+
+1. Set the required paths in `eval.py`, including: `task_file`, `record_file`.
+2. Set the required paths in `utils/Constant.py`, including: `model_path`.
+3. Run the evaluation script:
+    ```bash
+    python eval.py
+    ```
+
+
+**Whole Proof Model Evaluation**
+
+This method applies only to the `deepseek_v2_prover_enhanced` model, which generates the entire proof in a single forward pass, rather than constructing it incrementally via search.
+
+1. Set the required paths in `eval_ds_v2.py`, including: `task_file`, `record_file`.
+2. Set the required paths in `utils/Constant.py`, including: `model_path`.
+3. Run the evaluation script:
+    ```bash
+    python eval_ds_v2.py
+    ```
 
