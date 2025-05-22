@@ -17,7 +17,12 @@ for i in range(num_of_actors):
                                             SAMPLE_CONFIG))
     time.sleep(MODEL_LOAD_GAP)
 
+"""
+To use theorems from the LeanComb dataset in proofs,
+please add "import Theorem" to the init_state variable.
 
+The LeanComb dataset will be released soon.
+"""
 init_state = """import Mathlib
 open BigOperators Real Nat Topology
 """
