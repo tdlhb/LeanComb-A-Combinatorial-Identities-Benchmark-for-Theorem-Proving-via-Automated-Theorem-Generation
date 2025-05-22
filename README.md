@@ -26,7 +26,7 @@ The directory structure is organized as follows:
 │   └── [Test dataset files]
 ```
 
-### 1. **`eval_results/`**
+### 1. **`code/`**
 This folder contains the code for generating augmented data, verifying the retrieved data, and performing evaluation. It includes all scripts related to data enhancement, validation, and testing.
 
 
@@ -39,18 +39,11 @@ This folder includes the dataset used for evaluation and testing. The dataset is
 
 
 ## Model Access
-We provide our models via Hugging Face. The models can be accessed using the following link and token.
+We provide our models via Hugging Face. The models can be accessed using the following link.
 
 ### Hugging Face Repository
 Model link:
 
-https://huggingface.co/llmformath/leancomb
+https://huggingface.co/llmformath/anonymous
 
-
-### Access token (read-only):
-```
-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
-```
-
-Note: The model repository is private and requires the token above to access.
 
