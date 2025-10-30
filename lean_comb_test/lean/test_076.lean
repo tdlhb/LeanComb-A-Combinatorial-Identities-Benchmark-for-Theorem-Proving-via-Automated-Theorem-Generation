@@ -2,5 +2,4 @@ import Mathlib
 import Theorem
 open Nat Finset BigOperators Real
 
-theorem test_076 (n m k : ℕ) :
-    ∑ r in range (k + 1), choose n r * choose m (k - r) = choose (n + m) k       := sorry
+theorem test_076 (r : ℕ ) (n : ℕ) (hrn : r > n) : Nat.choose (r + (n - r) - 1) (n - r) = Nat.choose (n - 1) (n - r)  := sorry
